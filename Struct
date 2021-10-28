@@ -111,7 +111,7 @@ namespace Chapter08
 {
     class Program
     {
-        struct Point
+        struct Point // 구조체를 쓰면 메모리 할당이 고정적이라 객체지향에서 사용x
         {
             public int x;
             public int y;
