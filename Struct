@@ -83,7 +83,7 @@ namespace Chapter08
         {
             // 클래스
             PointClass pointClassA = new PointClass(10, 20);
-            PointClass pointClassB = pointClassA; // 참조 복사가 일어납니다.
+            PointClass pointClassB = pointClassA; // 참조 복사가 일어납니다. --> 동시에 값이 바뀜
 
             pointClassB.x = 100;
             pointClassB.y = 200;
@@ -94,7 +94,7 @@ namespace Chapter08
 
             // 구조체
             PointStruct pointStructA = new PointStruct(10, 20);
-            PointStruct pointStructB = pointStructA;
+            PointStruct pointStructB = pointStructA; // 값 복사가 일어납니다. --> 메모리를 다시 할당을 받음 --> A와 B가 다름
 
             pointStructB.x = 100;
             pointStructB.y = 200;
