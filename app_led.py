@@ -1,4 +1,4 @@
-form flask import Flask
+from flask import Flask
 import RPi.GPIO as GPIO
 
 app = Flask(__name__)
