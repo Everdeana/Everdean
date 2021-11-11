@@ -1,4 +1,4 @@
-from fl
+from flask
 ask import Flask, request
 import RPi.GPIO as GPIO
 
