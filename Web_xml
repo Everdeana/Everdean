@@ -1,0 +1,75 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Xml.Linq;
+
+namespace Ch12_1125
+{
+    class Program
+    {
+        class Weather
+        {
+            public string Hour { get; set; }
+            public string Day { get; set; }
+            public string Wf { get; set; }
+            public string Temp { get; set; }
+            public string WdKor { get; set; }
+            public string WfKor { get; set; }
+            public string Tmn { get; set; }
+            public string Tmx { get; set; }
+            public string Cat { get; set; }
+
+        }
+        static void Main(string[] args)
+        {
+            string[] stringArray =
+            {
+                "http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=2635056000",
+                "http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=2920051500",
+                "http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=3023052000",
+                "http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=3611035000",
+                "http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=4215061500",
+                "http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1123060000",
+                "http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=4148025300",
+                "http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=5013025300"
+            };
+
+            for (int i = 0; i < stringArray.Length; i++)
+            {
+                XElement xElement = XElement.Load(stringArray[i]);
+                var xmlQuery1 = from item in xElement.Descendants("data")
+                               select new Weather()
+                               {
+                                   Hour = item.Element("hour").Value,
+                                   Day = item.Element("day").Value,
+                                   Temp = item.Element("temp").Value,
+                                   WdKor = item.Element("wdKor").Value,
+                                   WfKor = item.Element("wfKor").Value,
+                                   Tmn = item.Element("tmn").Value,
+                                   Tmx = item.Element("tmx").Value
+                               };
+                var xmlQuery2 = from item in xElement.Descendants("item")
+                               select new Weather()
+                               {
+                                   Cat = item.Element("category").Value
+                               };
+                foreach (var item in xmlQuery2)
+                {
+                    Console.Write(item.Cat + "\t");
+                }
+                Console.WriteLine();
+                foreach (var item in xmlQuery1)
+                {
+                    Console.Write(item.Hour + "\t");
+                    Console.Write(item.Day + "\t");
+                    Console.Write(item.Temp + "\t");
+                    Console.Write(item.WdKor + "\t");
+                    Console.Write(item.WfKor + "\t");
+                    Console.Write(item.Tmn + "\t");
+                    Console.Write(item.Tmx + "\t");
+                    Console.WriteLine();
+                }
+            }
+        }
+    }
+}
