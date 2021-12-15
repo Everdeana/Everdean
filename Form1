@@ -1,0 +1,187 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Xml.Linq;
+
+namespace Test1215
+{
+    public partial class Form1 : Form
+    {
+        class Weather
+        {
+            public string Hour { get; set; }
+            public string Day { get; set; }
+            public string Wf { get; set; }
+            public string Temp { get; set; }
+            public string WdKor { get; set; }
+            public string WfKor { get; set; }
+            public string Tmn { get; set; }
+            public string Tmx { get; set; }
+            public string Cat { get; set; }
+
+        }
+        public Form1()
+        {
+            InitializeComponent();
+            Text = "B/41730054/장국진";
+
+            var firstname = new string[] {"서울시", "강원도", "제주특별자치도" };
+
+            var middlename = new string[] { "마포구", "강남구", "서대문구", "속초시", "삼척시", "춘천시", "서귀포시", "제주시" };
+            var middlename1 = new string[] { "마포구", "강남구", "서대문구" };
+            var middlename2 = new string[] { "속초시", "삼척시", "춘천시" };
+            var middlename3 = new string[] { "서귀포시", "제주시" };
+
+            var lastname = new string[] { "연남동", "수서동", "연희동", "대포동", "남양동", "퇴계동", "남원읍", "우도면", "애월읍" };
+            var lastname1 = new string[] { "연남동", "수서동", "연희동" };
+            var lastname2 = new string[] { "대포동", "남양동", "퇴계동" };
+            var lastname3 = new string[] { "남원읍", "우도면", "애월읍" };
+
+            var dataSource = new string[] 
+            {
+                "http://www.kma.go.kr/weather/forecast/mid-term-rss3.jsp?stnId=109", // 서울/경기
+                "http://www.kma.go.kr/weather/forecast/mid-term-rss3.jsp?stnId=105", // 강원
+                "http://www.kma.go.kr/weather/forecast/mid-term-rss3.jsp?stnId=184", // 제주
+                "http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1144071000", // 마포구 연남동
+                "http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1168075000", // 강남구 수서동
+                "http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1141061500", // 서대문구 연희동
+                "http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=4221060000", // 속초시 대포동
+                "http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=4223051000", // 삼척시 남양동
+                "http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=4211066000", // 춘천시 퇴계동
+                "http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=5013025300", // 서귀포시 남원읍
+                "http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=5011033000", // 제주시 우도면
+                "http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=5011025300"  // 제주시 애월읍
+            };
+
+            comboBox1.DataSource = firstname;
+            comboBox2.DataSource = middlename;
+            comboBox3.DataSource = lastname;
+
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            dataGridView1.CurrentCellChanged += dataGridView1_CurrentCellChanged;
+            // dataGridView1.Datasource = 
+
+
+            if (comboBox1.SelectedItem == "서울시")
+            {
+                comboBox2.DataSource = middlename1;
+            }
+            if (comboBox1.SelectedItem == "강원도")
+            {
+                comboBox2.DataSource = middlename2;
+            }
+            if (comboBox1.SelectedItem == "제주특별자치도")
+            {
+                comboBox2.DataSource = middlename3;
+            }
+            
+
+            for (int i = 0; i < dataSource.Length; i++)
+            {
+                XElement xElement = XElement.Load(dataSource[i]);
+                var xmlQuery1 = from item in xElement.Descendants("data")
+                                select new Weather()
+                                {
+                                    Hour = item.Element("hour").Value,
+                                    Day = item.Element("day").Value,
+                                    Temp = item.Element("temp").Value,
+                                    WdKor = item.Element("wdKor").Value,
+                                    WfKor = item.Element("wfKor").Value,
+                                    Tmn = item.Element("tmn").Value,
+                                    Tmx = item.Element("tmx").Value
+                                    
+                                };
+                var xmlQuery2 = from item in xElement.Descendants("item")
+                                select new Weather()
+                                {
+                                    Cat = item.Element("category").Value
+                                };
+            }
+            dataGridView1.DataSource = dataSource;
+
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (comboBox1.SelectedItem == "서울시")
+                {
+                    
+                }
+            }
+            catch (Exception exception)
+            {
+
+            }
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+
+            }
+            catch (Exception exception)
+            {
+
+            }
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+
+            }
+            catch (Exception exception)
+            {
+
+            }
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                
+            }
+            catch (Exception exception)
+            {
+
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+            }
+            catch (Exception exception)
+            {
+
+            }
+        }
+        private void dataGridView1_CurrentCellChanged(object sender, EventArgs e)
+        {
+            try
+            {
+
+            }
+            catch (Exception exception)
+            {
+
+            }
+        }
+
+
+
+    }
+}
