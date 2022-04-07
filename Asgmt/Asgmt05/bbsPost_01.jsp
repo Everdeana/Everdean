@@ -26,6 +26,13 @@
 		MultipartRequest  multi = new MultipartRequest(request, uploadPath, size, "utf-8", new DefaultFileRenamePolicy());
 		String filePath = application.getRealPath("/upload/" + filename); // 절대경로
 		
+		name = multi.getParameter("name"); 
+    	System.out.println(name); 
+    	subject = multi.getParameter("subject"); 
+    	System.out.println(subject); 
+    	content = multi.getParameter("content"); 
+    	System.out.println(content); 
+		
 		/* Enumeration 객체 타입으로 반환 처리   */
     	Enumeration files = multi.getFileNames();
     	String file1 = (String) files.nextElement(); 
@@ -50,23 +57,65 @@
 			e.printStackTrace();
 		}
 	}
-	response.sendRedirect("bbsResult.jsp?result=" + result);
+	// response.sendRedirect("bbsResult.jsp?result=" + result);
 %>    
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title> 게시글 입력 처리 페이지 </title>
+<style>
+	table, tr, td{
+		background:#C4E7D6;
+		border:1px solid green;
+		font:bold 1.0em Arial;  
+	}
+	table caption {
+		background:#66C19C;
+		border:2px solid green;
+		font:bold 1.1em Arial;
+		color:white;
+	}
+	button {
+		background-color:#E2F3EA;
+		border:solid green;
+		font:bold 0.9em Arial; 
+	}
+</style>
 </head>
 <body>
-	<h3> 입력된 게시물을 처리하고 결과 페이지로 이동 합니다. </h3>
-	작성자: <%=name %>  <br /> 
+	<table border="1" cellspacing="0" cellpadding="5">
+		<caption> 입력 내용 확인 </caption>
+		<tr>
+			<td>작성자</td>
+			<td><%=name %></td>
+		</tr>
+		<tr>
+			<td>제목</td>
+			<td><%=subject %></td>
+		</tr>
+		<tr>
+			<td>내용</td>
+			<td><%=content %></td>
+		</tr>
+		<tr>
+			<td>파일명</td>
+			<td><%=filename01%></td>
+		</tr>
+		<tr>
+			<td><button onclick="javascript:filecheck.submit()"> 입력 </button></td>
+			<td><button onclick="location.href='bbsBoard_01.jsp'">처음으로</button></td>
+		</tr>
+	</table>
+	<%--작성자: <%=name %>  <br /> 
  	제목: <%=subject %> <br /> 
-	파일명: <%=filename01 %> <br />
+	파일명: <%=filename01 %> <br />  --%>
  	<form name="filecheck" action="bbsResult.jsp" method="post">
 		<input type="hidden" name="name" value="<%=name%>"> <br/>
 		<input type="hidden" name="subject" value="<%=subject%>"> <br/>
-		<input type="hidden" name="filename1" value="<%=filename01%>"> <br/>
+		<input type="hidden" name="content" value="<%=content%>"> <br/>
+		<input type="hidden" name="filename01" value="<%=filename01%>"> <br/>
+		<input type="hidden" name="result" value="<%=result%>"> <br/>
 		<%-- <%= name %> <-- 공백 X  --%>
 	</form>
 </body>
