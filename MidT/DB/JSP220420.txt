@@ -1,0 +1,10 @@
+<중요>
+MySQL Password 변경
+
+<MySQL>
+데이터 베이스를 처리하는 기능
+CRUD 기능 수행
+Create
+Read: select, insert 할 때 사용
+Update
+Delete
