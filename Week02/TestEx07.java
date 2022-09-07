@@ -11,7 +11,7 @@ public class TestEx07 {
 		// TODO Auto-generated method stub
 		// 클래스 생성 = 인스턴스 생성
 		Scanner stdIn = new Scanner (System.in);
-		int re = 0;
+		int re = 0;  // 프로그램 종료(0), 계속(1)을 저장하는 변수 선언
 		int cnt = 0; // 프로그램 반복 처리 횟수를 저장하기 위한 변수 선언
 		do { // do~while()문은 최소한 한번은 무조건 실행
 			System.out.print("정수를 입력하세요: ");
