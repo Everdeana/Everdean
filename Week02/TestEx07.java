@@ -12,7 +12,7 @@ public class TestEx07 {
 		// 클래스 생성 = 인스턴스 생성
 		Scanner stdIn = new Scanner (System.in);
 		int re = 0;
-		do {
+		do { // do~while()문은 최소한 한번은 무조건 실행
 			System.out.print("정수를 입력하세요: ");
 			int n = stdIn.nextInt();
 			if (n > 0) {
