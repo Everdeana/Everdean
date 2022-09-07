@@ -12,6 +12,7 @@ public class TestEx07 {
 		// 클래스 생성 = 인스턴스 생성
 		Scanner stdIn = new Scanner (System.in);
 		int re = 0;
+		int cnt = 0; // 프로그램 반복 처리 횟수를 저장하기 위한 변수 선언
 		do { // do~while()문은 최소한 한번은 무조건 실행
 			System.out.print("정수를 입력하세요: ");
 			int n = stdIn.nextInt();
@@ -24,6 +25,8 @@ public class TestEx07 {
 			}
 			System.out.print("프로그램 (계속:1/종료:0): ");
 			re = stdIn.nextInt();
+			cnt++;
 		} while(re == 1);
+		System.out.println("프로그램은 "+ cnt +"번 반복");
 	}
 }
