@@ -1,31 +1,28 @@
 package ch03Test;
+/*	데이터의 기본 타입: int, long, double, float, char,
+ * 				  byte, Boolean
+ * 	메서드와 관련: void, return
+ * 	객체와 관련: new, instanceof()
+ * 	클래스와 메서드 접근제어자: public, private, protected
+ * 	클래스와 관련: class
+ * 	제어문, 조건문: if, else, if ~ else, switch, case
+ * 	반복문: do ~ while, while, for
+ * 	분기문: break, continue
+ * 	예외처리문: try ~ catch, throws Exception
+ * 	오픈 클래스와 연결: import */
 
-public class MethodTest01 {
 
-	
-	// 클래스 실행하면 main()메서드를 호출해서 실행한다.
+import java.util.Scanner;
+
+public class ReferenceVar01 {
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		long result = add(100, 200); // add() 매서드 호출
-		System.out.println("결과값=" + result);
-		
-		addPoint(5, 10);
-
+		String str = "Java Programming";
+		/*	String 자료헝이 아니다.
+		 * 	문자열 "Java Programming"을 저장하고 있는
+		 * 	인스턴스의 주소값을 저장 */
+		 Scanner stdIn = new Scanner(System.in);
+		 System.out.println(str);
 	}
-	
-	/*	반환 데이터 타입은 long
-	 * 	메서드 이름: add()
-	 * 	매개변수 long i, long j로 정의
-	 */
-	public static long add(long i, long j) {
-		// TODO Auto-generated method stub
-		long result = i + j;
-		return result;
-	}
-	
-	public static void addPoint(long n1, long n2){ // return 하지 않으면 void
-		long result = n1 + n2;
-		System.out.println("두번째 결과값=" + result);
-	}
-
 }
