@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /*	참조형 차입: 배열, 클래스, 인터페이스, 열거형
  * 	참조형은 데이터 저장장소의 주소를 기억하고 있다. */
-public class StudentRef {
+public class StudentRef01 {
 	// 학생 성적 관리 프로그램 작성
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
