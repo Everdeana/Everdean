@@ -2,25 +2,25 @@ package ch02Test;
 
 import java.util.Scanner;
 
-// µÎ °³ÀÇ ½Ç¼ö¸¦ ÀÔ·Â¹Ş¾Æ(¿ÜºÎÀÔ·Â Ã³¸®) Å« °ªÀ» Ç¥½ÃÇÏ´Â ÇÁ·Î±×·¥ ÀÛ¼º
+// ë‘ ê°œì˜ ì‹¤ìˆ˜ë¥¼ ì…ë ¥ë°›ì•„(ì™¸ë¶€ì…ë ¥ ì²˜ë¦¬) í° ê°’ì„ í‘œì‹œí•˜ëŠ” í”„ë¡œê·¸ë¨ ì‘ì„±
 
 public class TestEx02 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Scanner stdIn = new Scanner(System.in); // ÀÎ½ºÅÏ½º ¼±¾ğ
-		System.out.print("Ã¹ ¹ø¤Š ½Ç¼ö ÀÔ·Â: ");
+		Scanner stdIn = new Scanner(System.in); // ì¸ìŠ¤í„´ìŠ¤ ì„ ì–¸
+		System.out.print("ì²« ë²ˆì§¸ ì‹¤ìˆ˜ ì…ë ¥: ");
 		double x = stdIn.nextDouble();
-		System.out.print("µÎ ¹ø¤Š ½Ç¼ö ÀÔ·Â: ");
+		System.out.print("ë‘ ë²ˆ ì‹¤ìˆ˜ ì…ë ¥: ");
 		double y = stdIn.nextDouble();
-		double max; // ÀÔ·ÂµÈ µÎ ½Ç¼ö °ª Áß Å« °ªÀ» ÀúÀåÇÏ´Â º¯¼ö ¼±¾ğ
+		double max; // ì…ë ¥ëœ ë‘ ì‹¤ìˆ˜ ê°’ ì¤‘ í° ê°’ì„ ì €ì¥í•˜ëŠ” ë³€ìˆ˜ ì„ ì–¸
 		
 		if(x > y) {
 			max = x;
 		} else {
 			max = y;
 		}
-		System.out.println("Å« °ªÀº " + max + " ÀÔ´Ï´Ù.");
+		System.out.println("í° ê°’ì€ " + max + " ì…ë‹ˆë‹¤.");
 	}
 
 }
