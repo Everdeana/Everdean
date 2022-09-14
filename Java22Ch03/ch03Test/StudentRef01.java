@@ -2,29 +2,29 @@ package ch03Test;
 
 import java.util.Scanner;
 
-/*	ì°¸ì¡°í˜• ì°¨ì…: ë°°ì—´, í´ë˜ìŠ¤, ì¸í„°í˜ì´ìŠ¤, ì—´ê±°í˜•
- * 	ì°¸ì¡°í˜•ì€ ë°ì´í„° ì €ì¥ì¥ì†Œì˜ ì£¼ì†Œë¥¼ ê¸°ì–µí•˜ê³  ìˆë‹¤. */
+/*	ÂüÁ¶Çü Â÷ÀÔ: ¹è¿­, Å¬·¡½º, ÀÎÅÍÆäÀÌ½º, ¿­°ÅÇü
+ * 	ÂüÁ¶ÇüÀº µ¥ÀÌÅÍ ÀúÀåÀå¼ÒÀÇ ÁÖ¼Ò¸¦ ±â¾ïÇÏ°í ÀÖ´Ù. */
 public class StudentRef01 {
-	// í•™ìƒ ì„±ì  ê´€ë¦¬ í”„ë¡œê·¸ë¨ ì‘ì„±
+	// ÇĞ»ı ¼ºÀû °ü¸® ÇÁ·Î±×·¥ ÀÛ¼º
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String course[] = {"Java", "Python", "C Language"};
 		Scanner stdIn = new Scanner(System.in);
-		int n = 3; // ê¸°ë³¸í˜• ìë£Œí˜• íƒ€ì… ì„ ì–¸
-		int[] score = new int[n]; // ì°¸ì¡°í˜• ë°°ì—´ íƒ€ì… ì„ ì–¸
-		for (int i = 0; i < n; i++) { // ì„±ì  ì…ë ¥ ì²˜ë¦¬
-			System.out.print((i + 1) + "ë²ˆì§¸ ê³¼ëª© " + course[i] + "ì˜ ì ìˆ˜ = ");
-			score[i] = stdIn.nextInt(); // ë°°ì—´ íƒ€ì…ì— ì ìˆ˜ í‚¤ë³´ë“œ ì…ë ¥
+		int n = 3; // ±âº»Çü ÀÚ·áÇü Å¸ÀÔ ¼±¾ğ
+		int[] score = new int[n]; // ÂüÁ¶Çü ¹è¿­ Å¸ÀÔ ¼±¾ğ
+		for (int i = 0; i < n; i++) { // ¼ºÀû ÀÔ·Â Ã³¸®
+			System.out.print((i + 1) + "¹øÂ° °ú¸ñ " + course[i] + "ÀÇ Á¡¼ö = ");
+			score[i] = stdIn.nextInt(); // ¹è¿­ Å¸ÀÔ¿¡ Á¡¼ö Å°º¸µå ÀÔ·Â
 		}
-		// ì…ë ¥ëœ ì„±ì ì˜ ì´ì ê³¼ í‰ê· ì˜ ê³„ì‚°ì²˜ë¦¬
+		// ÀÔ·ÂµÈ ¼ºÀûÀÇ ÃÑÁ¡°ú Æò±ÕÀÇ °è»êÃ³¸®
 		int total = 0;
 		float average = 0; // float = 4byte
 		for (int i = 0; i < n; i++) {
 			System.out.println(course[i] + ":" + score[i]);
 			total = total + score[i];
 		}
-		System.out.println("ì´ì  ê²°ê³¼ëŠ” = " + total);
+		System.out.println("ÃÑÁ¡ °á°ú´Â = " + total);
 		average = total / n;
-		System.out.println(n + "ê³¼ëª©ì˜ í‰ê· ì€ = " + average);
+		System.out.println(n + "°ú¸ñÀÇ Æò±ÕÀº = " + average);
 	}
 }

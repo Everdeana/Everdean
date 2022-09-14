@@ -2,13 +2,13 @@ package ch03Test;
 
 import java.util.Scanner;
 
-/*	í•™ìƒ ì„±ì  ì²˜ë¦¬ í”„ë¡œê·¸ë¨
- * 	 1. êµê³¼ëª… í‚¤ë³´ë“œë¡œ ì…ë ¥
- * 	 2. ì„±ì  í‚¤ë³´ë“œ ì…ë ¥
- * 	 3. ì´ì  ê³„ì‚°
- * 	 4. í‰ê·  ê³„ì‚°
- * 	 5. êµê³¼ëª©ê³¼ í•´ë‹¹ ì ìˆ˜ ì¶œë ¥
- * 	 6. ì´ì ê³¼ í‰ê·  ì¶œë ¥ */
+/*	ÇĞ»ı ¼ºÀû Ã³¸® ÇÁ·Î±×·¥
+ * 	 1. ±³°ú¸í Å°º¸µå·Î ÀÔ·Â
+ * 	 2. ¼ºÀû Å°º¸µå ÀÔ·Â
+ * 	 3. ÃÑÁ¡ °è»ê
+ * 	 4. Æò±Õ °è»ê
+ * 	 5. ±³°ú¸ñ°ú ÇØ´ç Á¡¼ö Ãâ·Â
+ * 	 6. ÃÑÁ¡°ú Æò±Õ Ãâ·Â */
 
 public class StudentRef02 {
 
@@ -16,34 +16,34 @@ public class StudentRef02 {
 		// TODO Auto-generated method stub
 		// String course[] = {"Java", "Python", "C Language"};
 		// int score[] = {90, 89, 88};
-		// Scanner stdNum = new Scanner(System.in); // ê³¼ëª© ìˆ˜ ì…ë ¥
-		// System.out.print("ê³¼ëª© ìˆ˜ ì…ë ¥: ");
+		// Scanner stdNum = new Scanner(System.in); // °ú¸ñ ¼ö ÀÔ·Â
+		// System.out.print("°ú¸ñ ¼ö ÀÔ·Â: ");
 		// int n = stdNum.nextInt();
 		
-		Scanner stdIn = new Scanner(System.in); // ì ìˆ˜ í‚¤ë³´ë“œ ì…ë ¥
-		Scanner stdCh = new Scanner(System.in); // ê³¼ëª© í‚¤ë³´ë“œ ì…ë ¥
+		Scanner stdIn = new Scanner(System.in); // Á¡¼ö Å°º¸µå ÀÔ·Â
+		Scanner stdCh = new Scanner(System.in); // °ú¸ñ Å°º¸µå ÀÔ·Â
 		
 		int n = 3;
-		int[] score = new int[n]; // ì°¸ì¡°í˜• score ë°°ì—´ ì„ ì–¸
-		String[] course = new String[n]; // ì°¸ì¡°í˜• score ë°°ì—´ ì„ ì–¸
+		int[] score = new int[n]; // ÂüÁ¶Çü score ¹è¿­ ¼±¾ğ
+		String[] course = new String[n]; // ÂüÁ¶Çü score ¹è¿­ ¼±¾ğ
 		
 		for (int i = 0; i < n; i++) {
-			System.out.print((i + 1) + "ë²ˆì§¸ ê³¼ëª©ëª…: ");
-			course[i] = stdCh.nextLine(); // ë°°ì—´ íƒ€ì…ì— ì ìˆ˜ í‚¤ë³´ë“œ ì…ë ¥
-			System.out.print((i + 1) + "ë²ˆì§¸ ê³¼ëª© " + course[i] +"ì˜ ì ìˆ˜: ");
-			score[i] = stdIn.nextInt(); // ë°°ì—´ íƒ€ì…ì— ì ìˆ˜ í‚¤ë³´ë“œ ì…ë ¥
+			System.out.print((i + 1) + "¹øÂ° °ú¸ñ¸í: ");
+			course[i] = stdCh.nextLine(); // ¹è¿­ Å¸ÀÔ¿¡ Á¡¼ö Å°º¸µå ÀÔ·Â
+			System.out.print((i + 1) + "¹øÂ° °ú¸ñ " + course[i] +"ÀÇ Á¡¼ö: ");
+			score[i] = stdIn.nextInt(); // ¹è¿­ Å¸ÀÔ¿¡ Á¡¼ö Å°º¸µå ÀÔ·Â
 		}
 		
 		int total = 0;
 		float average = 0; // float = 4byte
 		
 		for (int i = 0; i < n; i++) {
-			System.out.println((i + 1) + "ë²ˆì§¸ ê³¼ëª© " + course[i] +"ì˜ ì ìˆ˜: " + score[i]);
+			System.out.println((i + 1) + "¹øÂ° °ú¸ñ " + course[i] +"ÀÇ Á¡¼ö: " + score[i]);
 			total = total + score[i];
 		}
 
-		System.out.println(n + "ê³¼ëª©ì˜ ì´ì ì€ = " + total);
+		System.out.println(n + "°ú¸ñÀÇ ÃÑÁ¡Àº = " + total);
 		average = total / n;
-		System.out.println(n + "ê³¼ëª©ì˜ í‰ê· ì€ = " + average);
+		System.out.println(n + "°ú¸ñÀÇ Æò±ÕÀº = " + average);
 	}
 }

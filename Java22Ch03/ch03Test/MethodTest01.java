@@ -3,29 +3,29 @@ package ch03Test;
 public class MethodTest01 {
 
 	
-	// í´ë˜ìŠ¤ ì‹¤í–‰í•˜ë©´ main()ë©”ì„œë“œë¥¼ í˜¸ì¶œí•´ì„œ ì‹¤í–‰í•œë‹¤.
+	// Å¬·¡½º ½ÇÇàÇÏ¸é main()¸Ş¼­µå¸¦ È£ÃâÇØ¼­ ½ÇÇàÇÑ´Ù.
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		long result = add(100, 200); // add() ë§¤ì„œë“œ í˜¸ì¶œ
-		System.out.println("ê²°ê³¼ê°’=" + result);
+		long result = add(100, 200); // add() ¸Å¼­µå È£Ãâ
+		System.out.println("°á°ú°ª=" + result);
 		
 		addPoint(5, 10);
 
 	}
 	
-	/*	ë°˜í™˜ ë°ì´í„° íƒ€ì…ì€ long
-	 * 	ë©”ì„œë“œ ì´ë¦„: add()
-	 * 	ë§¤ê°œë³€ìˆ˜ long i, long jë¡œ ì •ì˜ */
+	/*	¹İÈ¯ µ¥ÀÌÅÍ Å¸ÀÔÀº long
+	 * 	¸Ş¼­µå ÀÌ¸§: add()
+	 * 	¸Å°³º¯¼ö long i, long j·Î Á¤ÀÇ */
 	public static long add(long i, long j) {
 		// TODO Auto-generated method stub
 		long result = i + j;
 		return result;
 	}
 	
-	// ë°˜í™˜ ë°ì´í„° íƒ€ì… ëŒ€ì‹ ì— void
-	public static void addPoint(long n1, long n2){ // return í•˜ì§€ ì•Šìœ¼ë©´ void
+	// ¹İÈ¯ µ¥ÀÌÅÍ Å¸ÀÔ ´ë½Å¿¡ void
+	public static void addPoint(long n1, long n2){ // return ÇÏÁö ¾ÊÀ¸¸é void
 		long result = n1 + n2;
-		System.out.println("ë‘ë²ˆì§¸ ê²°ê³¼ê°’=" + result);
+		System.out.println("µÎ¹øÂ° °á°ú°ª=" + result);
 	}
 
 }

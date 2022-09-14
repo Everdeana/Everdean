@@ -1,15 +1,15 @@
 package ch03Test;
-/*	ë°ì´í„°ì˜ ê¸°ë³¸ íƒ€ì…: int, long, double, float, char,
+/*	µ¥ÀÌÅÍÀÇ ±âº» Å¸ÀÔ: int, long, double, float, char,
  * 				  byte, Boolean
- * 	ë©”ì„œë“œì™€ ê´€ë ¨: void, return
- * 	ê°ì²´ì™€ ê´€ë ¨: new, instanceof()
- * 	í´ë˜ìŠ¤ì™€ ë©”ì„œë“œ ì ‘ê·¼ì œì–´ì: public, private, protected
- * 	í´ë˜ìŠ¤ì™€ ê´€ë ¨: class
- * 	ì œì–´ë¬¸, ì¡°ê±´ë¬¸: if, else, if ~ else, switch, case
- * 	ë°˜ë³µë¬¸: do ~ while, while, for
- * 	ë¶„ê¸°ë¬¸: break, continue
- * 	ì˜ˆì™¸ì²˜ë¦¬ë¬¸: try ~ catch, throws Exception
- * 	ì˜¤í”ˆ í´ë˜ìŠ¤ì™€ ì—°ê²°: import */
+ * 	¸Ş¼­µå¿Í °ü·Ã: void, return
+ * 	°´Ã¼¿Í °ü·Ã: new, instanceof()
+ * 	Å¬·¡½º¿Í ¸Ş¼­µå Á¢±ÙÁ¦¾îÀÚ: public, private, protected
+ * 	Å¬·¡½º¿Í °ü·Ã: class
+ * 	Á¦¾î¹®, Á¶°Ç¹®: if, else, if ~ else, switch, case
+ * 	¹İº¹¹®: do ~ while, while, for
+ * 	ºĞ±â¹®: break, continue
+ * 	¿¹¿ÜÃ³¸®¹®: try ~ catch, throws Exception
+ * 	¿ÀÇÂ Å¬·¡½º¿Í ¿¬°á: import */
 
 
 import java.util.Scanner;
@@ -19,9 +19,9 @@ public class ReferenceVar01 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String str = "Java Programming";
-		/*	String ìë£Œí—ì´ ì•„ë‹ˆë‹¤.
-		 * 	ë¬¸ìì—´ "Java Programming"ì„ ì €ì¥í•˜ê³  ìˆëŠ”
-		 * 	ì¸ìŠ¤í„´ìŠ¤ì˜ ì£¼ì†Œê°’ì„ ì €ì¥ */
+		/*	String ÀÚ·áÇëÀÌ ¾Æ´Ï´Ù.
+		 * 	¹®ÀÚ¿­ "Java Programming"À» ÀúÀåÇÏ°í ÀÖ´Â
+		 * 	ÀÎ½ºÅÏ½ºÀÇ ÁÖ¼Ò°ªÀ» ÀúÀå */
 		 Scanner stdIn = new Scanner(System.in);
 		 int n = stdIn.nextInt();
 		 int[] a = new int[n];
