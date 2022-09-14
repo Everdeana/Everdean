@@ -23,6 +23,8 @@ public class ReferenceVar01 {
 		 * 	문자열 "Java Programming"을 저장하고 있는
 		 * 	인스턴스의 주소값을 저장 */
 		 Scanner stdIn = new Scanner(System.in);
+		 int n = stdIn.nextInt();
+		 int[] a = new int[n];
 		 System.out.println(str);
 	}
 }
