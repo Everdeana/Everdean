@@ -1,10 +1,10 @@
-# 원소의 개수가 비어있는 리스트 선언
+# Declaration of a list with an empty number
 aa = []
-# 리스트의 원소 수(4개)
+# Number of elements in the list (four)
 
 # print("-----case1-----")
 for i in range(0, 4):
-    aa.append (0) # append로 추가한다
+    aa.append (0) # add as append
     
 # print("-----case2-----")    
 sum = 0
@@ -15,4 +15,4 @@ for i in range(0, 4):
 
 # print("-----case3-----")    
 sum = aa[0] + aa[1] + aa[2] + aa[3]        
-print("결과값=%d" %sum)
+print("result=%d" %sum)
