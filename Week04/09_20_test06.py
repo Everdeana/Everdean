@@ -1,5 +1,3 @@
-import imp
-from platform import win32_edition
 from tkinter import *
 
 window = Tk() # Object Variables provided by tkinter
