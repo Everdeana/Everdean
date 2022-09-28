@@ -2,13 +2,13 @@ package ch06;
 
 import java.util.ArrayList;
 
-// ArrayList ì•ˆì— ë°ì´í„°ë¥¼ ì‚½ì… / ì‚­ì œ / ìˆ˜ì •
+// ArrayList ¾È¿¡ µ¥ÀÌÅÍ¸¦ »ğÀÔ / »èÁ¦ / ¼öÁ¤
 public class ArrayList02 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		ArrayList<String> list = new ArrayList<String>(); 
-		// ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
+		// ÀÎ½ºÅÏ½º »ı¼º
 		list.add("Python");
 		list.add("Java");
 		list.add("JavaScript");
@@ -24,7 +24,7 @@ public class ArrayList02 {
 		int num = list.size();
 		for (int cnt = 0; cnt < num; cnt++) {
 			String str = list.get(cnt);
-			System.out.println("ì…ë ¥ëœ ë¦¬ìŠ¤íŠ¸[" + cnt + "] = " + str);
+			System.out.println("ÀÔ·ÂµÈ ¸®½ºÆ®[" + cnt + "] = " + str);
 		}
 		System.out.println("First HTML: " + index1);
 		System.out.println("Last HTML: " + index2);
