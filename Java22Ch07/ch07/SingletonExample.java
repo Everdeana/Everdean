@@ -5,15 +5,15 @@ public class SingletonExample {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		// Singleton01 obj1 = new Singleton01();
-		// Singleton01 obj2 = new Singleton01(); --> "╢ы╦╔ Singleton ╟╢ц╪ ют╢о╢ы." 
+		// Singleton01 obj2 = new Singleton01(); --> "К▀╓К╔╦ Singleton Й╟²Л╡╢ Л·┘К▀┬К▀╓." --> Л≤╓К╔≤ 
 		
 		Singleton01 obj1 = Singleton01.getInstance();
-		Singleton01 obj2 = Singleton01.getInstance(); // --> "╟╟ю╨ Singleton ╟╢ц╪ ют╢о╢ы."
+		Singleton01 obj2 = Singleton01.getInstance(); // --> "Й╟≥Л²─ Singleton Й╟²Л╡╢ Л·┘К▀┬К▀╓."
 		
 		if (obj1 == obj2) {
-			System.out.println("╟╟ю╨ Singleton ╟╢ц╪ ют╢о╢ы.");
+			System.out.println("Й╟≥Л²─ Singleton Й╟²Л╡╢ Л·┘К▀┬К▀╓.(Л═∙Л┐│)");
 		} else {
-			System.out.println("╢ы╦╔ Singleton ╟╢ц╪ ют╢о╢ы.");
+			System.out.println("К▀╓К╔╦ Singleton Й╟²Л╡╢ Л·┘К▀┬К▀╓.(Л≤╓К╔≤)");
 		}
 	}
 
