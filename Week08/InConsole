@@ -1,0 +1,66 @@
+sqlite3 콘솔에서 작업 내용 
+Microsoft Windows [Version 10.0.22000.1098]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\admin>cd \
+
+C:\>dir 22*
+ C 드라이브의 볼륨: --
+ 볼륨 일련 번호: --
+
+ C:\ 디렉터리
+
+0000-00-00  오전 00:00   
+          dirName
+               0개 파일                   0 바이트
+               1개 디렉터리  440,516,399,104 바이트 남음
+
+C:\>cd 22-AI-A
+
+C:\22-AI-A>dir/w
+ C 드라이브의 볼륨: OS
+ 볼륨 일련 번호: --
+
+ C:\22-AI-A 디렉터리
+
+[.]
+dir1
+.
+.
+.
+
+              n개 파일         0 바이트
+               n개 디렉터리  440,515,432,448 바이트 남음
+
+C:\22-AI-A>sqlite3
+SQLite version 3.20.1 2017-08-24 16:21:36
+Enter ".help" for usage hints.
+Connected to a transient in-memory database.
+Use ".open FILENAME" to reopen on a persistent database.
+sqlite> .open ndb.db
+sqlite> .show
+        echo: off
+         eqp: off
+     explain: auto
+     headers: off
+        mode: list
+   nullvalue: ""
+      output: stdout
+colseparator: "|"
+rowseparator: "\n"
+       stats: off
+       width:
+    filename: ndb.db
+sqlite> .tables
+Test
+sqlite> select * from Test;
+sqlite> insert into Test values ('smart02', '길동', 'bt@g.com', 2011);
+sqlite> select * from Test;
+smart02|길동|bt@g.com|2011
+sqlite> .header on
+sqlite> .mode column
+sqlite> select * from Test;
+id          userName    email       year
+----------  ----------  ----------  ----------
+smart02     길동          bt@g.com    2011
+sqlite>
