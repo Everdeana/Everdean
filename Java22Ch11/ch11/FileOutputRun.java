@@ -9,17 +9,18 @@ public class FileOutputRun {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner stdIn = new Scanner(System.in);
-		System.out.print("Ãâ·ÂÇÒ ÆÄÀÏ ÀÌ¸§: ");
+		System.out.print("ì¶œë ¥í•  íŒŒì¼ ì´ë¦„: ");
 		
 		String fileName = stdIn.nextLine().trim();
 		Scanner fileInput = null;
-		// ¿¹¿ÜÃ³¸®¹®
+		// ì˜ˆì™¸ì²˜ë¦¬ë¬¸
 		try {
-			// Scanner °´Ã¼¿¡(Å°º¸µå ÀÔ·ÂX) ÅØ½ºÆ® ÆÄÀÏÀ» ¹Ù·Î ¿¬°á
+			/* Scanner ê°ì²´ì— (í‚¤ë³´ë“œ ì…ë ¥ì´ ì•„ë‹ˆë¼) í…ìŠ¤íŠ¸ íŒŒì¼ì„ ë°”ë¡œ ì—°ê²°  
+			 * File ê°ì²´ë¥¼ í†µí•´ íŒŒì¼ì´ë¦„ì„ ë„˜ê¸´ë‹¤. */ 
 			fileInput = new Scanner(new File(fileName));
 		} catch (FileNotFoundException e) {
 			// TODO: handle exception
-			System.out.println(fileName + ": ÆÄÀÏÀ» ¿­Áö ¸øÇß½À´Ï´Ù.");
+			System.out.println(fileName + ": íŒŒì¼ì„ ì—´ì§€ ëª»í–ˆìŠµë‹ˆë‹¤.");
 			System.out.println(e);
 			System.exit(0);
 		}
